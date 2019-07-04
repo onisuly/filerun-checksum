@@ -25,7 +25,7 @@
 <table class="niceborder" style="clear:both;margin:10px;" cellspacing="1" cellpadding="10">
     <?php $this->displayRow('File size', \FM::formatFileSize(\FM::getFileSize($data['fullPath']))); ?>
     <?php
-    $algorithmList = explode(',', self::getSetting('algorithm'));
+    $algorithmList = explode(';', self::getSetting('algorithm'));
     foreach ($algorithmList as $algorithm) {
         $algorithm = trim($algorithm);
         $checksum = hash_file(strtolower($algorithm), $data['fullPath']);

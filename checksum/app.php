@@ -17,7 +17,7 @@ class custom_checksum extends \FileRun\Files\Plugin
             [
                 'key' => 'algorithm',
                 'title' => self::t('Hashing algorithm'),
-                'comment' => self::t('Add multiple algorithms splited by comma, like: md5,sha1,sha256,sha512,crc32<br/><br/>Found all supported algorithms from <a href="%1" target="_blank">here</a>.', array('https://php.net/manual/en/function.hash-file.php'))
+                'comment' => self::t('Add multiple algorithms splited by semicolon, like: md5;sha1;sha256;sha512;crc32<br/><br/>Found all supported algorithms from <a href="%1" target="_blank">here</a>.', array('https://php.net/manual/en/function.hash-file.php'))
             ]
         ];
     }
