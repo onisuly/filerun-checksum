@@ -8,7 +8,7 @@ class custom_checksum extends \FileRun\Files\Plugin
     {
         $this->JSconfig = [
             'title' => self::t('Checksum'),
-            'iconCls' => 'fa fa-fw fa-hashtag',
+            'iconCls' => 'fa-hashtag',
             "popup" => true,
             'width' => 600, 'height' => 400,
             'requires' => ['download']
@@ -17,7 +17,7 @@ class custom_checksum extends \FileRun\Files\Plugin
             [
                 'key' => 'algorithm',
                 'title' => self::t('Hashing algorithm'),
-                'comment' => self::t('Add multiple algorithms splited by semicolon, like: md5;sha1;sha256;sha512;crc32<br/><br/>All supported algorithms <i title="%1" class="fa fa-info-circle silver" id="fr-gen673"></i>', array(implode("\n", hash_algos())))
+                'comment' => self::t('Add multiple algorithms splited by semicolon, like: md5;sha1;sha256;sha512;crc32')
             ]
         ];
     }
@@ -38,7 +38,7 @@ class custom_checksum extends \FileRun\Files\Plugin
     {
         $value = S::safeHTML(S::forHTML($value));
         echo '<tr>';
-        echo '<td nowrap>' . $title . '</td>';
+        echo '<th scope="row">' . $title . '</th>';
         echo '<td>' . $value . '</td>';
         echo '</tr>';
     }
